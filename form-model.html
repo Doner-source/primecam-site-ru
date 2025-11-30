@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Same head -->
+</head>
+<body>
+    <!-- Header/floating -->
+    <section class="form reveal">
+        <h2>Форма для моделей</h2>
+        <form id="model-form" class="multi-step">
+            <div class="step" data-step="1">
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="number" name="age" placeholder="Возраст" required min="18">
+                <input type="text" name="country" placeholder="Страна" required>
+                <input type="text" name="city" placeholder="Город" required>
+                <input type="tel" name="phone" placeholder="Телефон (WhatsApp)" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <button type="button" class="next">Далее</button>
+            </div>
+            <div class="step" data-step="2">
+                <input type="number" name="height" placeholder="Рост" required>
+                <input type="number" name="weight" placeholder="Вес" required>
+                <input type="text" name="languages" placeholder="Языки">
+                <select name="format">
+                    <option>Студия</option>
+                    <option>Удалённо</option>
+                </select>
+                <button type="button" class="prev">Назад</button>
+                <button type="button" class="next">Далее</button>
+            </div>
+            <div class="step" data-step="3">
+                <label>Есть ли опыт?</label>
+                <textarea name="experience"></textarea>
+                <input type="file" name="photos" multiple accept="image/*">
+                <button type="button" class="prev">Назад</button>
+                <button type="button" class="next">Далее</button>
+            </div>
+            <div class="step" data-step="4">
+                <label><input type="checkbox" required> Подтверждаю, что мне 18+</label>
+                <label><input type="checkbox" required> Согласие на обработку данных</label>
+                <button type="button" class="prev">Назад</button>
+                <button type="submit">Отправить</button>
+            </div>
+        </form>
+    </section>
+    <!-- Footer -->
+</body>
+</html>

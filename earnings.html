@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <!-- Same head -->
+</head>
+<body>
+    <!-- Header/floating -->
+    <section class="earnings reveal">
+        <h1>Заработок</h1>
+        <div class="levels">
+            <div>Silver - Модель без опыта.</div>
+            <div>Gold - Опытная модель</div>
+            <div>Platinum - Топовая модель.</div>
+            <div>Diamond - Привилегированная модель, элита индустрий.</div>
+        </div>
+        <div class="payouts">
+            <h2>Способы выплат</h2>
+            <p>Криптовалюта (USDT)</p>
+            <p>Bank Transfer</p>
+            <h2>График выплат:</h2>
+            <p>Каждый день</p>
+        </div>
+        <div class="calculator reveal">
+            <h2>Интерактивный калькулятор дохода</h2>
+            <select id="level">
+                <option>Silver</option>
+                <option>Gold</option>
+                <option>Platinum</option>
+                <option>Diamond</option>
+            </select>
+            <select id="hours">
+                <!-- Dynamic via JS -->
+            </select>
+            <input type="range" id="shifts" min="1" max="30" value="1">
+            <div id="income">$0</div>
+        </div>
+        <div id="diamond-text" style="display:none;">Привилегированный уровень заработок от $15000</div>
+    </section>
+    <!-- Footer -->
+</body>
+</html>

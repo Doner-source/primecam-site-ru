@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeCam Models</title>
+    <!-- Preload fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=GT+America:wght@800&display=swap" as="style"> <!-- Assuming GT America via similar font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=GT+America:wght@800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
+    <!-- Three.js for WebGL -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/EffectComposer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/RenderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/ShaderPass.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/shaders/BokehShader.js"></script> <!-- For DoF -->
+    <!-- JS -->
+    <script defer src="js/script.js"></script>
+    <!-- SEO -->
+    <meta name="description" content="PrimeCam Models — агентство моделей нового поколения">
+    <link rel="alternate" hreflang="en" href="https://en.domain.com/">
+    <link rel="alternate" hreflang="es" href="https://es.domain.com/">
+    <link rel="alternate" hreflang="pt" href="https://pt.domain.com/">
+    <!-- Analytics placeholders -->
+    <!-- Google Analytics 4: Add your tag here -->
+    <!-- Facebook Pixel: Add your code here -->
+    <!-- Hotjar: Add your code here -->
+</head>
+<body>
+    <div id="cursor"></div>
+    <header class="header header--transparent">
+        <div class="logo">PrimeCam Models</div> <!-- Replace with img if logo available -->
+        <nav class="nav">
+            <a href="#block1">Главная</a>
+            <a href="about.html">О компании</a>
+            <a href="vacancies.html">Вакансии</a>
+            <a href="reviews.html">Отзывы</a>
+            <a href="earnings.html">Заработок</a>
+            <a href="gallery.html">Галерея</a>
+            <a href="blog.html">Блог</a>
+            <select class="lang-switch">
+                <option>RU</option>
+                <option>EN</option>
+                <option>ES</option>
+                <option>PT</option>
+            </select>
+            <a href="form-model.html" class="cta">Оставить заявку</a>
+        </nav>
+    </header>
+    <!-- Floating buttons -->
+    <div class="floating-buttons">
+        <a href="https://wa.me/" class="float-btn whatsapp">WhatsApp</a>
+        <a href="https://instagram.com/" class="float-btn instagram">Instagram</a>
+        <a href="form-model.html" class="float-btn register">Регистрация</a>
+    </div>
+
+    <!-- Block 1: Hero -->
+    <section id="block1" class="hero reveal">
+        <div class="hero__bg"> <!-- WebGL canvas will be here via JS -->
+            <iframe src="https://player.vimeo.com/video/1141120386?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1792" height="1024" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="video_2592c6c2_1764248394376"></iframe>
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__left">
+                <div class="marquee">Это стиль жизни • Фабрика победительниц • #1 в мире</div> <!-- Running string -->
+                <h1 class="hero__title">Твой путь к финансовой свободе</h1>
+                <a href="form-model.html" class="cta">Начать зарабатывать</a>
+                <div class="stats">
+                    <div>10,000+ моделей</div>
+                    <div>50+ стран</div>
+                    <div>$100M+ выплачено</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Block 2: Slider Our Experience -->
+    <section id="block2" class="reveal">
+        <h2>Наш опыт</h2>
+        <div class="slider">
+            <img src="https://i.postimg.cc/htfsmXQN/0b4d20bd-b00a-4f30-a5da-2020f828f9a6.png" alt="">
+            <img src="https://i.postimg.cc/T3w7ckF3/616726a4-ab86-4fcc-a4db-3deb796bc5a3.png" alt="">
+            <img src="https://i.postimg.cc/kgzcv7W0/9b8e5e74-198e-4baf-99d9-a9ce517419f6.png" alt="">
+            <img src="https://i.postimg.cc/dVL6ChZ8/a3c0ba56-403d-4d5c-b184-763cb8dd159c.png" alt="">
+            <img src="https://i.postimg.cc/tJvPRzk4/bb8c759a-4da3-47a5-9f7b-663780507ac5.png" alt="">
+            <img src="https://i.postimg.cc/8P3Wqtsb/c992e7e3-b189-4537-8874-93d4729b6f3a.png" alt="">
+        </div>
+    </section>
+
+    <!-- Block 3: Who we are -->
+    <section id="block3" class="reveal">
+        <h2>Кто мы</h2>
+        <p>PrimeCam Models — это агентство нового поколения, создающее карьеру моделям по всему миру. Мы объединяем профессионализм, стиль и продуманную стратегию продвижения, чтобы каждая девушка могла реализовать свой потенциал в индустрии моды, рекламы и digital-проектов.</p>
+        <p>Мы работаем с брендами международного уровня, организуем обучение, сопровождение и полное развитие моделей с нуля, помогая им уверенно двигаться к успеху. PrimeCam Models — место, где талант превращается в возможность, а мечта становится карьерой.</p>
+        <div class="stats">
+            <div>10+ лет опыта</div>
+            <div>10,000+ моделей</div>
+            <div>#1 в мире</div>
+        </div>
+        <a href="about.html" class="cta">Узнать больше</a>
+    </section>
+
+    <!-- Block 4: What we offer -->
+    <section id="block4" class="cards reveal">
+        <h2>Что мы предлагаем</h2>
+        <div class="card">Мониторинг и поддержка 24/7</div>
+        <div class="card">Студии высокого уровня</div>
+        <div class="card">Профессиональные фотосессии</div>
+        <div class="card">Международные путешествия</div>
+        <div class="card">Гибкий график</div>
+        <div class="card">Еженедельные выплаты</div>
+        <div class="card">Бонусы и инсентивы</div>
+        <div class="card">Мотивационный коучинг</div>
+        <div class="card">Международное признание</div>
+        <div class="card">Финансовые консультации</div>
+        <div class="card">Планирование целей</div>
+        <div class="card">Конкурсы с призами</div>
+        <div class="card">Работа из дома (удалённо)</div>
+        <div class="card">Техническая поддержка</div>
+    </section>
+
+    <!-- Block 5: Gallery preview -->
+    <section id="block5" class="reveal">
+        <h2>Галерея</h2>
+        <div class="gallery-grid">
+            <div>2025 <span class="badge">New</span><img src="https://i.postimg.cc/ncw5NbvR/3be0c94e-7482-4084-a2be-520b3c17c86d.png" alt="" loading="lazy"></div>
+            <div>Дубай 2025 <span class="badge">New</span><img src="https://i.postimg.cc/GmwP4XRN/a3158f57-d6f1-485c-b4b7-17cf7733c66f.png" alt="" loading="lazy"></div>
+            <div>Лаукала (Laucala Island), Фиджи<img src="https://i.postimg.cc/V68LMbvk/9cd66a9b-3028-4bbc-b38d-7fb51c3bef61.png" alt="" loading="lazy"></div>
+            <div>Мастер класс<img src="https://i.postimg.cc/3x1P94tj/813e9fa5-e3a1-4a18-9f79-2c4c197e5d48.png" alt="" loading="lazy"></div>
+            <div>Осуществления мечты<img src="https://i.postimg.cc/63WqgvK9/cdd5f0e1-f708-4d8f-bd56-9bd2ab8d5c2f.png" alt="" loading="lazy"></div>
+            <div>Наши модели<img src="https://i.postimg.cc/8sQS82vp/4d4106ad-fde1-4e1d-ada4-1052e39b09de.png" alt="" loading="lazy"></div>
+            <div>Все локаций <span class="badge">New</span><img src="https://i.postimg.cc/gkmpDWYd/02d72f89-04b4-419c-a48c-92e9462e2a93.png" alt="" loading="lazy"></div>
+        </div>
+        <a href="gallery.html" class="cta">Смотреть все</a>
+    </section>
+
+    <!-- Block 6: Short Films (placeholder) -->
+    <section id="block6" class="reveal">
+        <h2>Short Films</h2>
+        <div class="reels-carousel">
+            <div class="reel-placeholder"><button>Play</button></div>
+            <div class="reel-placeholder"><button>Play</button></div>
+            <div class="reel-placeholder"><button>Play</button></div>
+            <div class="reel-placeholder"><button>Play</button></div>
+            <div class="reel-placeholder"><button>Play</button></div>
+        </div>
+    </section>
+
+    <!-- Block 7: Reviews (placeholder) -->
+    <section id="block7" class="reveal">
+        <h2>Отзывы</h2>
+        <div class="reviews-slider">
+            <div class="review-placeholder"><button>Play</button></div>
+            <div class="review-placeholder"><button>Play</button></div>
+            <div class="review-placeholder"><button>Play</button></div>
+            <div class="review-placeholder"><button>Play</button></div>
+            <div class="review-placeholder"><button>Play</button></div>
+        </div>
+        <a href="reviews.html" class="cta">Все отзывы</a>
+    </section>
+
+    <!-- Block 8: Big Video -->
+    <section id="block8" class="reveal">
+        <h2>Видео</h2>
+        <video controls src="https://streamable.com/913pp"></video>
+    </section>
+
+    <!-- Block 9: CTA Banner -->
+    <section id="block9" class="reveal">
+        <div class="cta-banner">
+            <p>Готова изменить свою жизнь? → Заполнить анкету за 2 минуты</p>
+            <p>Ready to change your life? → Apply in 2 minutes</p>
+            <p>¿Lista para cambiar tu vida? → Llena el formulario en 2 minutos</p>
+            <p>Pronta para mudar sua vida? → Preencha em 2 minutos</p>
+            <a href="vacancies.html" class="cta">Заполнить</a>
+        </div>
+    </section>
+
+    <!-- Block 10: Map -->
+    <section id="block10" class="reveal">
+        <h2>Работаем по всему миру</h2>
+        <div class="map-container">
+            <!-- Globe and topo map with animations via JS -->
+            <div class="globe"></div>
+            <div class="topo-map"></div>
+            <!-- Points -->
+            <div class="point" data-location="Латинская Америка">Латинская Америка</div>
+            <div class="point" data-location="Европа">Европа</div>
+            <div class="point" data-location="Страны СНГ">Страны СНГ</div>
+            <div class="point" data-location="Малайзия">Малайзия</div>
+            <div class="point" data-location="Россия">Россия</div>
+            <div class="point" data-location="Австралия">Австралия</div>
+        </div>
+    </section>
+
+    <!-- Block 11: Vacancies Teaser -->
+    <section id="block11" class="reveal">
+        <h2>Мы ищем не только моделей</h2>
+        <a href="vacancies.html" class="cta">Смотреть все вакансии</a>
+    </section>
+
+    <!-- Block 12: Not specified in TЗ, but TЗ says 12 blocks – assuming footer or extra, left as is -->
+
+    <footer>
+        <nav>
+            <a href="#">Контакты</a>
+            <a href="vacancies.html">Вакансии</a>
+            <a href="#">FAQ</a>
+        </nav>
+        <div class="social">
+            <a href="#">TikTok</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Twitter</a>
+        </div>
+        <p>Copyright © 2025 PrimeCam Models</p>
+        <a href="#">Политика безопасности</a> <!-- Default policy: Standard text about data protection, no sharing, etc. -->
+        <p>Мы уважаем вашу конфиденциальность. Ваши данные используются только для обработки заявок и не передаются третьим лицам. Мы соблюдаем GDPR и аналогичные законы.</p>
+    </footer>
+</body>
+</html>
