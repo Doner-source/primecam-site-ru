@@ -1,111 +1,1002 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeCam Models</title>
-    <!-- Preload fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" as="style">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=GT+America:wght@800&display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=GT+America:wght@800&display=swap" rel="stylesheet">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- GSAP CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/ScrollTrigger.min.js"></script>
-    <!-- Three.js for WebGL -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/EffectComposer.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/RenderPass.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/postprocessing/ShaderPass.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/examples/js/shaders/BokehShader.js"></script>
-    <!-- JS -->
-    <script defer src="js/script.js"></script>
-    <!-- SEO -->
-    <meta name="description" content="PrimeCam Models — агентство моделей нового поколения">
-    <link rel="alternate" hreflang="en" href="https://en.domain.com/">
-    <link rel="alternate" hreflang="es" href="https://es.domain.com/">
-    <link rel="alternate" hreflang="pt" href="https://pt.domain.com/">
+  <meta charset="UTF-8" />
+  <title>PrimeCam Models - Твой путь к финансовой свободе</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="PrimeCam Models - международное агентство для моделей и команды. Вакансии, заработок, обучение, путешествия, карьерный рост." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-    <div id="cursor"></div>
-    <header class="header header--transparent">
-        <div class="logo">PrimeCam Models</div>
-        <nav class="nav">
-            <a href="#block1">Главная</a>
-            <a href="about.html">О компании</a>
-            <a href="vacancies.html">Вакансии</a>
-            <a href="reviews.html">Отзывы</a>
-            <a href="earnings.html">Заработок</a>
-            <a href="gallery.html">Галерея</a>
-            <a href="blog.html">Блог</a>
-            <select class="lang-switch">
-                <option>RU</option>
-                <option>EN</option>
-                <option>ES</option>
-                <option>PT</option>
-            </select>
-            <a href="form-model.html" class="cta">Оставить заявку</a>
-        </nav>
-    </header>
-    <div class="floating-buttons">
-        <a href="https://wa.me/" class="float-btn whatsapp">WhatsApp</a>
-        <a href="https://instagram.com/" class="float-btn instagram">Instagram</a>
-        <a href="form-model.html" class="float-btn register">Регистрация</a>
-    </div>
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
 
-    <!-- Block 1: Hero -->
-    <section id="block1" class="hero reveal">
-        <div class="hero__bg">
-            <canvas id="hero-canvas"></canvas> <!-- For Three.js -->
-            <iframe class="fallback-video" src="https://player.vimeo.com/video/1141120386?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1792" height="1024" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="video_2592c6c2_1764248394376"></iframe>
+  <!-- Floating buttons -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/0000000000" target="_blank" class="floating-btn floating-btn--whatsapp" aria-label="WhatsApp">
+      WhatsApp
+    </a>
+    <a href="https://instagram.com" target="_blank" class="floating-btn floating-btn--instagram" aria-label="Instagram">
+      Instagram
+    </a>
+    <a href="#apply" class="floating-btn floating-btn--apply" aria-label="Регистрация">
+      Регистрация
+    </a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header header--transparent">
+    <div class="header__inner">
+      <a href="#hero" class="logo">
+        <!-- заглушка логотипа -->
+        <span class="logo__mark">PC</span>
+        <span class="logo__text">PrimeCam Models</span>
+      </a>
+      <nav class="nav">
+        <a href="#hero">Главная</a>
+        <a href="#about">О компании</a>
+        <a href="#vacancies">Вакансии</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#earnings">Заработок</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#blog">Блог</a>
+        <button class="btn-nav-lang" type="button">
+          RU
+        </button>
+        <a href="#apply" class="btn-nav-cta cta">Оставить заявку</a>
+      </nav>
+      <button class="header__burger" type="button" aria-label="Открыть меню">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / БЛОК 1 -->
+    <section id="hero" class="hero">
+      <div class="hero__media hero__bg">
+        <!-- Видео фон (Vimeo) -->
+        <div class="hero__video-wrapper">
+          <iframe 
+            src="https://player.vimeo.com/video/1141120386?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="PrimeCam Models video"
+          ></iframe>
         </div>
         <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <div class="hero__left">
-                <div class="marquee">Это стиль жизни • Фабрика победительниц • #1 в мире</div>
-                <h1 class="hero__title">Твой путь к финансовой свободе</h1>
-                <a href="form-model.html" class="cta">Начать зарабатывать</a>
-                <div class="stats">
-                    <div data-stat="10000">10,000+ моделей</div>
-                    <div data-stat="50">50+ стран</div>
-                    <div data-stat="100"> $100M+ выплачено</div>
-                </div>
+      </div>
+      <div class="hero__content container">
+        <div class="hero__left">
+          <div class="hero__ticker">
+            <span>Это стиль жизни</span>
+            <span>Фабрика победительниц</span>
+            <span>#1 в мире</span>
+            <span>This is a lifestyle</span>
+            <span>Fábrica de vencedoras</span>
+          </div>
+          <h1 class="hero__title">
+            Твой путь к финансовой свободе
+          </h1>
+          <p class="hero__lead">
+            PrimeCam Models - агентство нового поколения для девушек, которые хотят зарабатывать, путешествовать и развиваться в digital индустрии.
+          </p>
+          <button class="hero__cta cta" data-scroll-target="#apply">
+            Начать зарабатывать
+          </button>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="10000">10,000+</span>
+              <span class="hero__stat-label">моделей</span>
             </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="50">50+</span>
+              <span class="hero__stat-label">стран</span>
+            </div>
+            <div class="hero__stat">
+              <span class="hero__stat-number" data-count="100">$100M+</span>
+              <span class="hero__stat-label">выплачено</span>
+            </div>
+          </div>
         </div>
+        <div class="hero__right">
+          <div class="hero__card floating">
+            <p class="hero__card-label">Заполни анкету за 2 минуты</p>
+            <p class="hero__card-text">Онлайн формат, обучение, поддержка 24/7.</p>
+            <button class="hero__card-btn cta" data-scroll-target="#apply">
+              Оставить заявку
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Block 2: Slider -->
-    <section id="block2" class="reveal">
-        <h2>Наш опыт</h2>
-        <div class="slider">
-            <img src="https://i.postimg.cc/htfsmXQN/0b4d20bd-b00a-4f30-a5da-2020f828f9a6.png" alt="" loading="lazy">
-            <img src="https://i.postimg.cc/T3w7ckF3/616726a4-ab86-4fcc-a4db-3deb796bc5a3.png" alt="" loading="lazy">
-            <img src="https://i.postimg.cc/kgzcv7W0/9b8e5e74-198e-4baf-99d9-a9ce517419f6.png" alt="" loading="lazy">
-            <img src="https://i.postimg.cc/dVL6ChZ8/a3c0ba56-403d-4d5c-b184-763cb8dd159c.png" alt="" loading="lazy">
-            <img src="https://i.postimg.cc/tJvPRzk4/bb8c759a-4da3-47a5-9f7b-663780507ac5.png" alt="" loading="lazy">
-            <img src="https://i.postimg.cc/8P3Wqtsb/c992e7e3-b189-4537-8874-93d4729b6f3a.png" alt="" loading="lazy">
+    <!-- БЛОК 2: Наш опыт (слайдер) -->
+    <section class="section section--dark reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Наш опыт</h2>
+          <p>Студии, корпоративы, путешествия, события по всему миру.</p>
         </div>
+        <div class="experience-slider" data-slider>
+          <div class="experience-slider__track">
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/htfsmXQN/0b4d20bd-b00a-4f30-a5da-2020f828f9a6.png" alt="Корпоратив PrimeCam Models" loading="lazy" />
+            </div>
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/T3w7ckF3/616726a4-ab86-4fcc-a4db-3deb796bc5a3.png" alt="Модели и команда" loading="lazy" />
+            </div>
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/kgzcv7W0/9b8e5e74-198e-4baf-99d9-a9ce517419f6.png" alt="Путешествия PrimeCam" loading="lazy" />
+            </div>
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/dVL6ChZ8/a3c0ba56-403d-4d5c-b184-763cb8dd159c.png" alt="Событие агентства" loading="lazy" />
+            </div>
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/tJvPRzk4/bb8c759a-4da3-47a5-9f7b-663780507ac5.png" alt="Командное мероприятие" loading="lazy" />
+            </div>
+            <div class="experience-slide">
+              <img src="https://i.postimg.cc/8P3Wqtsb/c992e7e3-b189-4537-8874-93d4729b6f3a.png" alt="Жизнь агентства" loading="lazy" />
+            </div>
+          </div>
+          <div class="experience-slider__nav">
+            <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущий слайд"></button>
+            <div class="slider-dots"></div>
+            <button class="slider-arrow slider-arrow--next" type="button" aria-label="Следующий слайд"></button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Остальные блоки аналогично, чтобы не удлинять — скопируй из предыдущего моего ответа, но с исправлениями: добавь loading="lazy" ко всем img, data-stat для анимаций count-up. -->
-
-    <footer>
-        <nav>
-            <a href="#">Контакты</a>
-            <a href="vacancies.html">Вакансии</a>
-            <a href="#">FAQ</a>
-        </nav>
-        <div class="social">
-            <a href="#">TikTok</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Twitter</a>
+    <!-- БЛОК 3: Кто мы (О компании кратко) -->
+    <section id="about" class="section reveal">
+      <div class="container about">
+        <div class="about__text">
+          <h2>Кто мы</h2>
+          <p>
+            PrimeCam Models - это агентство нового поколения, создающее карьеру моделям по всему миру. Мы объединяем профессионализм, стиль и продуманную стратегию продвижения, чтобы каждая девушка могла реализовать свой потенциал в индустрии моды, рекламы и digital проектов.
+          </p>
+          <p>
+            Мы работаем с брендами международного уровня, организуем обучение, сопровождение и полное развитие моделей с нуля, помогаем уверенно двигаться к успеху. PrimeCam Models - место, где талант превращается в возможность, а мечта становится карьерой.
+          </p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-number">10+</span>
+              <span class="about__stat-label">лет опыта</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">10,000+</span>
+              <span class="about__stat-label">моделей</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">#1</span>
+              <span class="about__stat-label">в мире</span>
+            </div>
+          </div>
+          <a href="#about-full" class="cta about__cta">Узнать больше</a>
         </div>
-        <p>Copyright © 2025 PrimeCam Models</p>
-        <a href="#">Политика безопасности</a>
-        <p>Мы уважаем вашу конфиденциальность. Ваши данные используются только для обработки заявок и не передаются третьим лицам. Мы соблюдаем GDPR и аналогичные законы.</p>
-    </footer>
+      </div>
+    </section>
+
+    <!-- БЛОК 4: Что мы предлагаем (14 карточек) -->
+    <section class="section section--cards reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Что мы предлагаем</h2>
+          <p>Полный цикл сопровождения моделей и команды.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Мониторинг и поддержка 24/7</h3>
+            <p>Личный куратор и команда, которая всегда на связи и помогает решать любые вопросы.</p>
+          </article>
+          <article class="card">
+            <h3>Студии высокого уровня</h3>
+            <p>Современные студии с профессиональной техникой, светом и уютными комнатами.</p>
+          </article>
+          <article class="card">
+            <h3>Профессиональные фотосессии</h3>
+            <p>Создаем портфолио, которое продает, с лучшими фотографами и стилистами.</p>
+          </article>
+          <article class="card">
+            <h3>Международные путешествия</h3>
+            <p>Съемки, ивенты и ретриты в лучших локациях мира.</p>
+          </article>
+          <article class="card">
+            <h3>Гибкий график</h3>
+            <p>Ты сама выбираешь, сколько и когда работать, совмещая с учебой и личной жизнью.</p>
+          </article>
+          <article class="card">
+            <h3>Еженедельные выплаты</h3>
+            <p>Стабильные выплаты в долларах и удобные способы вывода.</p>
+          </article>
+          <article class="card">
+            <h3>Бонусы и инсентивы</h3>
+            <p>Премии, конкурсы, подарки и поездки для активных моделей.</p>
+          </article>
+          <article class="card">
+            <h3>Мотивационный коучинг</h3>
+            <p>Личные разборы, работа с целями и психологическая поддержка.</p>
+          </article>
+          <article class="card">
+            <h3>Международное признание</h3>
+            <p>Работа с глобальными платформами и брендами.</p>
+          </article>
+          <article class="card">
+            <h3>Финансовые консультации</h3>
+            <p>Помогаем грамотно управлять доходом и строить финансовую подушку.</p>
+          </article>
+          <article class="card">
+            <h3>Планирование целей</h3>
+            <p>Выстраиваем индивидуальный план роста, карьерные и личные цели.</p>
+          </article>
+          <article class="card">
+            <h3>Конкурсы с призами</h3>
+            <p>Регулярные челленджи, внутренняя игровая механика и призы.</p>
+          </article>
+          <article class="card">
+            <h3>Работа из дома</h3>
+            <p>Удаленный формат с поддержкой, если нет возможности работать в студии.</p>
+          </article>
+          <article class="card">
+            <h3>Техническая поддержка</h3>
+            <p>Помощь с настройкой оборудования, интернета, платформ и софта.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 5: Галерея превью -->
+    <section id="gallery" class="section section--gallery-preview reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Галерея</h2>
+          <p>События, путешествия, локации и вдохновение для будущих моделей.</p>
+        </div>
+        <div class="gallery-preview-grid">
+          <div class="gallery-card">
+            <span class="badge badge--new">New</span>
+            <img src="https://i.postimg.cc/ncw5NbvR/3be0c94e-7482-4084-a2be-520b3c17c86d.png" alt="2025" loading="lazy" />
+            <h3>2025</h3>
+          </div>
+          <div class="gallery-card">
+            <span class="badge badge--new">New</span>
+            <img src="https://i.postimg.cc/GmwP4XRN/a3158f57-d6f1-485c-b4b7-17cf7733c66f.png" alt="Дубай 2025" loading="lazy" />
+            <h3>Дубай 2025</h3>
+          </div>
+          <div class="gallery-card">
+            <img src="https://i.postimg.cc/V68LMbvk/9cd66a9b-3028-4bbc-b38d-7fb51c3bef61.png" alt="Laucala Island, Фиджи" loading="lazy" />
+            <h3>Лаука́ла (Laucala Island), Фиджи</h3>
+          </div>
+          <div class="gallery-card">
+            <img src="https://i.postimg.cc/3x1P94tj/813e9fa5-e3a1-4a18-9f79-2c4c197e5d48.png" alt="Мастер класс" loading="lazy" />
+            <h3>Мастер класс</h3>
+          </div>
+          <div class="gallery-card">
+            <img src="https://i.postimg.cc/63WqgvK9/cdd5f0e1-f708-4d8f-bd56-9bd2ab8d5c2f.png" alt="Осуществления мечты" loading="lazy" />
+            <h3>Осуществления мечты</h3>
+          </div>
+          <div class="gallery-card">
+            <img src="https://i.postimg.cc/8sQS82vp/4d4106ad-fde1-4e1d-ada4-1052e39b09de.png" alt="Наши модели" loading="lazy" />
+            <h3>Наши модели</h3>
+          </div>
+          <div class="gallery-card">
+            <span class="badge badge--new">New</span>
+            <img src="https://i.postimg.cc/gkmpDWYd/02d72f89-04b4-419c-a48c-92e9462e2a93.png" alt="Все локаций" loading="lazy" />
+            <h3>Все локаций</h3>
+          </div>
+        </div>
+        <a href="#gallery-full" class="cta gallery__btn">Смотреть все</a>
+      </div>
+    </section>
+
+    <!-- БЛОК 6: Short Films (заглушки под 9:16 рилсы) -->
+    <section class="section reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Short Films</h2>
+          <p>Короткие ролики в стиле TikTok и Reels: День модели, йога, советы новичкам.</p>
+        </div>
+        <div class="shortfilms">
+          <div class="shortfilms__item shortfilms__item--placeholder">
+            <button type="button" class="shortfilms__play">play</button>
+          </div>
+          <div class="shortfilms__item shortfilms__item--placeholder">
+            <button type="button" class="shortfilms__play">play</button>
+          </div>
+          <div class="shortfilms__item shortfilms__item--placeholder">
+            <button type="button" class="shortfilms__play">play</button>
+          </div>
+          <div class="shortfilms__item shortfilms__item--placeholder">
+            <button type="button" class="shortfilms__play">play</button>
+          </div>
+          <div class="shortfilms__item shortfilms__item--placeholder">
+            <button type="button" class="shortfilms__play">play</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 7: Отзывы (заглушки) -->
+    <section id="reviews" class="section reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Отзывы моделей</h2>
+          <p>Видео истории девушек, которые уже изменили свою жизнь.</p>
+        </div>
+        <div class="reviews-grid">
+          <div class="review-card review-card--placeholder">
+            <div class="review-card__video">
+              <button type="button" class="review-card__play">play</button>
+            </div>
+            <div class="review-card__meta">
+              <h3>Модель 1</h3>
+              <p>Пока в разработке.</p>
+            </div>
+          </div>
+          <div class="review-card review-card--placeholder">
+            <div class="review-card__video">
+              <button type="button" class="review-card__play">play</button>
+            </div>
+            <div class="review-card__meta">
+              <h3>Модель 2</h3>
+              <p>Пока в разработке.</p>
+            </div>
+          </div>
+          <div class="review-card review-card--placeholder">
+            <div class="review-card__video">
+              <button type="button" class="review-card__play">play</button>
+            </div>
+            <div class="review-card__meta">
+              <h3>Модель 3</h3>
+              <p>Пока в разработке.</p>
+            </div>
+          </div>
+          <div class="review-card review-card--placeholder">
+            <div class="review-card__video">
+              <button type="button" class="review-card__play">play</button>
+            </div>
+            <div class="review-card__meta">
+              <h3>Модель 4</h3>
+              <p>Пока в разработке.</p>
+            </div>
+          </div>
+          <div class="review-card review-card--placeholder">
+            <div class="review-card__video">
+              <button type="button" class="review-card__play">play</button>
+            </div>
+            <div class="review-card__meta">
+              <h3>Модель 5</h3>
+              <p>Пока в разработке.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#reviews-full" class="cta">Все отзывы (скоро)</a>
+      </div>
+    </section>
+
+    <!-- БЛОК 8: Видео горизонтальное -->
+    <section class="section reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Видео презентация</h2>
+          <p>История PrimeCam Models, путешествия, события, вдохновение.</p>
+        </div>
+        <div class="video-large">
+          <!-- Заглушка: можно заменить на финальное видео -->
+          <video controls preload="metadata">
+            <source src="https://streamable.com/913pp" />
+            Ваш браузер не поддерживает видео.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 9: CTA баннер 4 языка -->
+    <section class="section section--cta-multi reveal">
+      <div class="container">
+        <div class="cta-multi">
+          <div class="cta-multi__col">
+            <h3>RU</h3>
+            <p>Готова изменить свою жизнь? Заполни анкету за 2 минуты.</p>
+            <button class="cta" data-scroll-target="#apply">Заполнить анкету</button>
+          </div>
+          <div class="cta-multi__col">
+            <h3>EN</h3>
+            <p>Ready to change your life? Apply in 2 minutes.</p>
+            <button class="cta" data-scroll-target="#apply">Apply now</button>
+          </div>
+          <div class="cta-multi__col">
+            <h3>ES</h3>
+            <p>¿Lista para cambiar tu vida? Llena el formulario en 2 minutos.</p>
+            <button class="cta" data-scroll-target="#apply">Aplicar</button>
+          </div>
+          <div class="cta-multi__col">
+            <h3>PT</h3>
+            <p>Pronta para mudar sua vida? Preencha em 2 minutos.</p>
+            <button class="cta" data-scroll-target="#apply">Preencher formulário</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 10: Карта присутствия -->
+    <section class="section section--map reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Карта присутствия</h2>
+          <p>Работаем по всему миру.</p>
+        </div>
+        <div class="world-map">
+          <div class="world-map__globe">
+            <div class="world-map__globe-inner">
+              <div class="world-map__point world-map__point--latam">
+                <span>Латинская Америка</span>
+              </div>
+              <div class="world-map__point world-map__point--europe">
+                <span>Европа</span>
+              </div>
+              <div class="world-map__point world-map__point--cis">
+                <span>Страны СНГ</span>
+              </div>
+              <div class="world-map__point world-map__point--malaysia">
+                <span>Малазия</span>
+              </div>
+              <div class="world-map__point world-map__point--russia">
+                <span>Россия</span>
+              </div>
+              <div class="world-map__point world-map__point--australia">
+                <span>Австралия</span>
+              </div>
+            </div>
+          </div>
+          <p class="world-map__subtitle">
+            Цифровая карта в стиле digital: динамичные точки, линии и анимация вращения создают ощущение глобального присутствия.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЛОК 11: Тизер вакансий -->
+    <section class="section section--vac-teaser reveal">
+      <div class="container">
+        <div class="vac-teaser">
+          <div class="vac-teaser__text">
+            <h2>Мы ищем не только моделей</h2>
+            <p>В команду нужны кураторы, HR менеджеры, скауты и другие специалисты.</p>
+          </div>
+          <button class="cta vac-teaser__btn" data-scroll-target="#vacancies">
+            Смотреть все вакансии
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА ВАКАНСИИ (как отдельный блок) -->
+    <section id="vacancies" class="section section--vacancies reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Вакансии</h2>
+          <p>Выбери формат, который подходит именно тебе.</p>
+        </div>
+
+        <div class="vac-filter">
+          <button class="vac-filter__btn vac-filter__btn--active" data-vac-filter="all">Все вакансии</button>
+          <button class="vac-filter__btn" data-vac-filter="models">Для моделей</button>
+          <button class="vac-filter__btn" data-vac-filter="office">Офис и менеджмент</button>
+          <button class="vac-filter__btn" data-vac-filter="remote">Удаленная работа</button>
+        </div>
+
+        <div class="vac-grid">
+          <!-- Вакансия 1: модель -->
+          <article class="vac-card" data-vac-type="models remote studio">
+            <h3>Модель</h3>
+            <p class="vac-card__meta">Формат: онлайн (удаленно) или в студии</p>
+            <p>Для кого: девушки 18+</p>
+            <p>Условия: $3,000 - $15,000+ в месяц, гибкий график, обучение, еженедельные выплаты.</p>
+            <button class="cta vac-card__btn" data-scroll-target="#apply-model">
+              Заполнить анкету
+            </button>
+          </article>
+
+          <!-- Вакансия 2: куратор моделей -->
+          <article class="vac-card" data-vac-type="office remote">
+            <h3>Куратор моделей</h3>
+            <p>Обязанности: адаптация новичков, техническая помощь, мотивация.</p>
+            <p>Требования: эмпатия, опыт в сфере от 6 месяцев, английский Intermediate+.</p>
+            <button class="cta vac-card__btn" data-scroll-target="#apply-staff" data-vac-name="Куратор моделей">
+              Оставить заявку
+            </button>
+          </article>
+
+          <!-- Вакансия 3: HR менеджер -->
+          <article class="vac-card" data-vac-type="office">
+            <h3>HR менеджер</h3>
+            <p>Обязанности: собеседования, отбор кандидатов, онбординг.</p>
+            <p>Требования: опыт в HR от 1 года, коммуникабельность.</p>
+            <button class="cta vac-card__btn" data-scroll-target="#apply-staff" data-vac-name="HR менеджер">
+              Оставить заявку
+            </button>
+          </article>
+
+          <!-- Вакансия 4: Скаут (агент) -->
+          <article class="vac-card" data-vac-type="remote">
+            <h3>Скаут (агент)</h3>
+            <p>Обязанности: поиск моделей через соцсети.</p>
+            <p>Условия: процент от дохода приведенных моделей или фикс за лид.</p>
+            <button class="cta vac-card__btn" data-scroll-target="#apply-staff" data-vac-name="Скаут (агент)">
+              Оставить заявку
+            </button>
+          </article>
+        </div>
+
+        <!-- Страница "Как начать работу" (таймлайн) -->
+        <div id="how-to-start" class="howto">
+          <h3>Как начать работу</h3>
+          <ol class="howto__steps">
+            <li><strong>Заполни анкету</strong> - 2 минуты.</li>
+            <li><strong>Пройди собеседование</strong> - онлайн формат.</li>
+            <li><strong>Получи обучение</strong> - бесплатно.</li>
+            <li><strong>Начни работу</strong> - гибкий график.</li>
+            <li><strong>Получай выплаты</strong> - еженедельно.</li>
+          </ol>
+          <button class="cta" data-scroll-target="#apply">
+            Оставить заявку
+          </button>
+        </div>
+
+        <!-- Страница "Требования" -->
+        <div id="requirements" class="requirements">
+          <h3>Требования</h3>
+          <div class="requirements__cols">
+            <div>
+              <h4>Что нужно</h4>
+              <ul>
+                <li>Возраст 18+</li>
+                <li>Документ, удостоверяющий личность</li>
+                <li>Желание учиться и развиваться</li>
+                <li>Стабильный интернет (для удаленной работы)</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Что не нужно</h4>
+              <ul>
+                <li>Опыт работы (обучим с нуля)</li>
+                <li>Знание английского (есть переводчик)</li>
+                <li>Модельная внешность (важнее харизма и желание)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА ЗАРАБОТОК: калькулятор -->
+    <section id="earnings" class="section section--earnings reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Заработок</h2>
+          <p>Посмотри, сколько ты можешь зарабатывать на разных уровнях.</p>
+        </div>
+
+        <div class="levels">
+          <div class="level-badge level-badge--silver">Silver - модель без опыта</div>
+          <div class="level-badge level-badge--gold">Gold - опытная модель</div>
+          <div class="level-badge level-badge--platinum">Platinum - топовая модель</div>
+          <div class="level-badge level-badge--diamond">Diamond - привилегированная модель, элита индустрии</div>
+        </div>
+
+        <div class="payouts">
+          <h3>Способы выплат</h3>
+          <ul>
+            <li>Криптовалюта (USDT)</li>
+            <li>Bank transfer</li>
+          </ul>
+          <p>График выплат: каждый день.</p>
+        </div>
+
+        <!-- Калькулятор -->
+        <div class="earnings-calculator" id="earnings-calculator">
+          <!-- Линия 1 - уровень -->
+          <div class="earnings-row">
+            <h3>1. Уровень модели</h3>
+            <div class="earnings-levels" id="earnings-levels">
+              <button type="button" class="earnings-level earnings-level--active" data-level="silver">Silver</button>
+              <button type="button" class="earnings-level" data-level="gold">Gold</button>
+              <button type="button" class="earnings-level" data-level="platinum">Platinum</button>
+              <button type="button" class="earnings-level" data-level="diamond">Diamond</button>
+            </div>
+          </div>
+
+          <!-- Линия 2 - часы -->
+          <div class="earnings-row" id="earnings-hours-row">
+            <h3>2. Количество часов работы за смену</h3>
+            <div class="earnings-hours" id="earnings-hours">
+              <!-- наполняется из JS в зависимости от уровня -->
+            </div>
+          </div>
+
+          <!-- Линия 3 - смены -->
+          <div class="earnings-row" id="earnings-shifts-row">
+            <h3>3. Отработанные смены в месяц</h3>
+            <input type="range" id="earnings-shifts" min="1" max="30" value="10" />
+            <div class="earnings-shifts__labels">
+              <span>1</span>
+              <span>15</span>
+              <span>30</span>
+            </div>
+          </div>
+
+          <div class="earnings-result" id="earnings-result">
+            <p class="earnings-result__text">
+              При уровне <span data-result-level>Silver</span>, сменах по <span data-result-hours>4</span> часа и <span data-result-shifts>10</span> сменах в месяц твой прогнозируемый доход:
+            </p>
+            <p class="earnings-result__amount">
+              <span data-result-amount>$0</span>
+            </p>
+          </div>
+
+          <!-- Diamond текст -->
+          <div class="earnings-diamond" id="earnings-diamond">
+            <h3>Diamond уровень</h3>
+            <p>Привилегированный уровень заработка от $15000 в месяц. Индивидуальные условия, личное сопровождение и расширенные возможности.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА ГАЛЕРЕЯ (полная) -->
+    <section id="gallery-full" class="section section--gallery-full reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Галерея - полная версия</h2>
+        </div>
+
+        <div class="gallery-tabs">
+          <button class="gallery-tab gallery-tab--active" data-gallery-tab="2025">2025</button>
+          <button class="gallery-tab" data-gallery-tab="dubai">Дубай 2025</button>
+          <button class="gallery-tab" data-gallery-tab="fiji">Лаука́ла (Laucala Island), Фиджи</button>
+          <button class="gallery-tab" data-gallery-tab="master">Мастер класс</button>
+          <button class="gallery-tab" data-gallery-tab="dreams">Осуществления мечты</button>
+          <button class="gallery-tab" data-gallery-tab="models">Наши модели</button>
+          <button class="gallery-tab" data-gallery-tab="locations">Все локаций</button>
+        </div>
+
+        <!-- Панель 2025 -->
+        <div class="gallery-panel gallery-panel--active" data-gallery-panel="2025">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/ncw5NbvR/3be0c94e-7482-4084-a2be-520b3c17c86d.png" loading="lazy" alt="2025" />
+            <img src="https://i.postimg.cc/02xQQNyB/20d6195c-e4de-4431-9024-08e568d744fd.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/KvY6JXqb/2150a146-38b6-4841-8cdb-f198eef3ce5d.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/ryfbdnVL/2762c277-0746-4994-a9f6-ea93eea3a429.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/pTzWVNbm/30a43799-1bf8-4996-af71-48d49327d0e8.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/5t8T6f0T/39442bbd-120d-4b6b-9419-0e3714eb4381.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9M8pfkG9/496318bb-f694-4678-933c-7d78bf5f4ac7.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/cLCdgtyP/4dff6265-b15e-4215-b681-5d70dc263256.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/j5K9fBwk/77516f9a-3585-4b99-99b7-3f2d413b8438.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/B66TRCdF/932624c3-8419-41b4-9866-792a798ca3d5.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9Q0cRw5Y/9f7a3d8a-9ac7-4240-a654-62d671caf09a.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/CLfNFmd8/b785d23e-3e6c-433e-99bc-cbb5635fb6da.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/d1p5BXLQ/c1136c41-61e6-4666-a7f4-c6a6062a0444.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/XvxK2P1P/c2bb8126-8991-45e7-a004-7b827c9ec6a5.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/XJRgFCz7/c8378ff1-e3e8-49f5-afaf-1390582979ab.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/66CrgTPc/d190f785-b02f-4e82-be69-9d349b6f7e15.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/pXqFMjJf/e6315759-cfaf-4c6f-a0a6-0c4e0b31c258.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/tJbxptfG/ec81f5fc-a794-4442-b0e7-f82c248a1675.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/GmtsLpXK/ed7dd311-d3f2-4959-8acd-21db3b231edb.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Дубай 2025 -->
+        <div class="gallery-panel" data-gallery-panel="dubai">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/GmwP4XRN/a3158f57-d6f1-485c-b4b7-17cf7733c66f.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/JhqnjVYG/0068c113-75c9-47c4-8b0a-894378cdbf81.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/8CWdG557/2be58de0-10f3-498f-a520-58e59ae0e74d.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/SRZCdYZP/3d5384f0-21fa-47b4-9dac-b26a93e61a45.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/CKFMhrM8/5219e72a-0318-43ec-afdc-1cf2c67477f5.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/s29BKZxh/52e7cb4d-4120-40a7-94e1-0779231deb41.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/J0gttNY8/52fffec6-0f69-48b6-91d3-c12ed5f07c4d.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/y65NmTjT/573b9f97-8fb8-4bca-ae56-f3a536975225.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/26yzvqZj/6214b847-47bf-4097-b389-873f3f88db64.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/KYnTVHqY/7f21d104-b69e-4880-83d3-068c0dfe323a.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/0jHKDRQT/8ad474b0-5e90-42d9-a6ae-22515a0e3535.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/G3S4MR3n/9c6da95e-5daa-4939-85b5-9476b914f740.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/LsH49Q4j/a7c5f670-deb4-4877-9d2e-816207bf3fc1.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9Fdrc7Pt/bb0dfda2-bff6-48ac-8493-96007d45327d.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/R0V3sZtz/c3dd9c34-6557-425c-b861-dc236403fc45.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/Dyr87XQq/e4df96cd-f8f1-486c-9170-afa571262a3b.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Фиджи -->
+        <div class="gallery-panel" data-gallery-panel="fiji">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/V68LMbvk/9cd66a9b-3028-4bbc-b38d-7fb51c3bef61.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9Fs5g8qH/1973a73e-5be1-4d8d-80c2-e9c0e9a02ad4.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/3xyrd0mq/1d88f68a-397c-435c-8f91-dd3b08adac27.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/T1hFCgdg/30040f3e-ff68-4017-b98b-912dbbf174f0.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9MgNR0Gv/3010026f-2ac2-42e9-8a9a-9d13b526866e.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/MpjxW28R/3b1c9b6e-be29-461c-a3ff-3351679f966d.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/fLsM2Hpb/3b1ec0c2-8854-4705-8182-767ade15a4d6.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/GpC0d4QX/721d2b22-3336-4bcb-9d34-8a8ee5c97bae.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/Y0nkSt94/9c1b9abc-5895-421b-bc68-c028e8860227.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/MTH9SwhV/a0f733f6-4350-4148-a0a1-377a870baf83.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/DwFkKW5X/aba01026-fdf8-451d-bf33-40d0f903c17c.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/HkHDCJ3X/bc539f7a-e77d-4ffd-b033-7da184e5b01e.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/L6twv9Rk/bdeee642-901d-4257-914c-aed320f37063.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/bwvgbpwB/dc804344-71cf-4ef2-9e83-c27b41849035.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/yd0yBNLZ/e50f3488-7d92-440e-8616-82a0fd1b349f.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/vTz7gNFf/ee794461-17d1-48e7-8c14-b39ba42a46cd.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Мастер класс -->
+        <div class="gallery-panel" data-gallery-panel="master">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/3x1P94tj/813e9fa5-e3a1-4a18-9f79-2c4c197e5d48.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/zXN8qPGj/2cb632ba-390b-4fc5-b781-6aedbe66564c.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/9X7Qm7tr/5b42792b-71e6-4180-aed2-0d965ef79161.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/dQrJPKwY/8bfc67db-9fcc-46a1-93bf-17843216d585.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/cLHqHqyr/942cd5f7-7c1c-400e-8cce-a88e1c7b4584.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/tCDQpqf7/bbd120e5-c0c7-4544-9fa0-3583e56422b6.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/HLcfwQL5/c133d9b3-9861-4a11-85aa-eb10abdec989.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Осуществления мечты -->
+        <div class="gallery-panel" data-gallery-panel="dreams">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/63WqgvK9/cdd5f0e1-f708-4d8f-bd56-9bd2ab8d5c2f.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/fTVjT5qz/9eff3096-c2a2-4dd4-9f28-3437f9086a16.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/nznGFJNp/ab5b57ee-dfe6-4ead-bffc-4d55572a67fa.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/66jfXF0P/fc8f22e9-2956-4491-8ad5-20a5c814de57.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Наши модели -->
+        <div class="gallery-panel" data-gallery-panel="models">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/8sQS82vp/4d4106ad-fde1-4e1d-ada4-1052e39b09de.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/nhgF7KJ4/062d10a9-59ae-402d-a30a-c38d3ccebf86.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/qvjmZQRX/11868281-fa54-4e50-9adf-90969be8f121.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/fRNnhHMb/168a0c8a-4ce7-4ef1-8f8d-62684b31ee6a.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/fL6qfLLn/2707bdb9-c1ab-436b-b01e-de2adf41e02c.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/90bXqvmV/2ec1c6c1-7197-4630-a6fa-5b53e66fb4ec.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/ydXswwS2/30a124f7-1a8d-4557-a8ee-bad69d5c47bc.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/KY0dBxBc/413b1acc-f796-460a-85ce-09cbe8c11455.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/4yfsZB6t/48f77bad-3cb2-445d-8463-1b878bf8df76.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/50w2fXDK/5b93277d-fb06-4e32-814a-55d6b3025c67.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/cCrkQ3Zh/68b8b5d4-12fe-49ae-bc52-d48bbd2efa01.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/Rhp5m9Vr/78d0252a-2eef-4efb-a832-566e864a12aa.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/DyCyfkYn/7cbc15e5-54fb-472e-b873-a67ac8dac1d9.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/FKzPtckr/8841ed52-a45a-4f0d-8c21-ecc9bb019594.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/7hdsXLYs/90ad3f48-82bf-4f36-abf1-a5c5be12127c.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/SsXt98mM/990b05cd-1c7d-4527-987d-e6d67a7fa913.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/76TmhkNF/a85b193f-8f76-4058-bb83-a6e0c3377e19.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/zBMvdwCt/aeeae808-b6f3-41aa-87e8-cfc8a6cd9c7b.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/FF8kGvGN/bf7dcb61-e3ea-4c50-ac32-84224f22e311.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/KcwJ6Rx6/c55a9b69-ba42-4700-a94b-36b294105346.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/3NvRzy9h/e2599723-1315-4047-acde-d5bd79e075aa.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/W4YM0H3R/f11d450b-00be-41cf-a9e6-169e05939151.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/7Lj5H8hH/f58547e0-8110-4ca5-a4f2-2cac9d8ebe38.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/FRf0pVdJ/f71d1f0b-373b-4972-9e3e-87e417b37b0e.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/6QPv84j5/fb38bf7a-6c7d-437b-b224-164e54e3f7c2.png" loading="lazy" alt="" />
+          </div>
+        </div>
+
+        <!-- Панель Все локаций -->
+        <div class="gallery-panel" data-gallery-panel="locations">
+          <div class="gallery-grid">
+            <img src="https://i.postimg.cc/gkmpDWYd/02d72f89-04b4-419c-a48c-92e9462e2a93.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/Y2PMTf4h/027a42b2-e302-4d8b-bdee-f3c83e34a229.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/P5pLB5fY/2d2584fa-2bff-436e-a655-a884bfab063a.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/Wbttk1ZP/6a67093b-1c5b-437c-8b87-bc201f5e4818.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/x8ND9hXF/70ce3a3a-9e73-48d5-8e81-3f7960fbdcf7.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/DyD0d3QM/9fb5d9c5-a529-41ae-9ffd-7176b8c37443.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/RZKS76ZV/bc8dfe07-fb73-4a08-af94-a64a77320630.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/XJ7n6sc5/c14a065f-e707-4492-b59e-28432de0c8ad.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/7PjbSynJ/c9463c13-17df-483e-b746-9e7095555636.png" loading="lazy" alt="" />
+            <img src="https://i.postimg.cc/kMLDWdvG/df1a6cbf-7021-449f-b15c-cb50a3d5e53d.png" loading="lazy" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА БЛОГ -->
+    <section id="blog" class="section section--blog reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Блог</h2>
+          <p>Статьи, истории, советы для моделей и команды.</p>
+        </div>
+        <div id="blog-list" class="blog-list">
+          <!-- Посты будут подставляться через JS (можно сделать интеграцию с ботом) -->
+          <article class="blog-card blog-card--placeholder">
+            <div class="blog-card__media"></div>
+            <div class="blog-card__content">
+              <h3>Первый пост появится здесь</h3>
+              <p>Контент будет добавлен позже. Интеграция с Telegram через HTTP API.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА ФОРМЫ ЗАЯВОК -->
+    <section id="apply" class="section section--apply reveal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Оставить заявку</h2>
+          <p>Выбери формат анкеты: модель или персонал.</p>
+        </div>
+
+        <div class="apply-tabs">
+          <button class="apply-tab apply-tab--active" data-apply-tab="model">Форма для моделей</button>
+          <button class="apply-tab" data-apply-tab="staff">Форма для персонала</button>
+        </div>
+
+        <!-- Форма для моделей (многошаговая, но реализуем как блоки с шагами) -->
+        <form id="apply-model" class="apply-form apply-form--active" data-telegram-token="8436171257:AAFCGdRLWzAtCY3dndzGU8BZmCaqt84G_Yc" data-telegram-chat="-5082745831">
+          <div class="apply-steps">
+            <!-- Шаг 1 -->
+            <fieldset class="apply-step apply-step--active" data-step="1">
+              <legend>Шаг 1 - Основное</legend>
+              <label>Имя <input type="text" name="name" required /></label>
+              <label>Возраст <input type="number" name="age" required /></label>
+              <label>Страна <input type="text" name="country" required /></label>
+              <label>Город <input type="text" name="city" required /></label>
+              <label>Телефон (WhatsApp) <input type="tel" name="phone" required /></label>
+              <label>Email <input type="email" name="email" required /></label>
+            </fieldset>
+
+            <!-- Шаг 2 -->
+            <fieldset class="apply-step" data-step="2">
+              <legend>Шаг 2 - Параметры</legend>
+              <label>Рост <input type="text" name="height" /></label>
+              <label>Вес <input type="text" name="weight" /></label>
+              <label>Языки <input type="text" name="languages" /></label>
+              <label>Формат работы
+                <select name="work_format">
+                  <option value="studio">Студия</option>
+                  <option value="remote">Удаленно</option>
+                  <option value="both">Студия и удаленно</option>
+                </select>
+              </label>
+            </fieldset>
+
+            <!-- Шаг 3 -->
+            <fieldset class="apply-step" data-step="3">
+              <legend>Шаг 3 - Опыт и фото</legend>
+              <label>Есть ли опыт?
+                <select name="experience">
+                  <option value="no">Нет, я новичок</option>
+                  <option value="little">Небольшой опыт</option>
+                  <option value="pro">Опытная модель</option>
+                </select>
+              </label>
+              <label>Загрузка 2 - 3 фото
+                <input type="file" name="photos" multiple />
+              </label>
+            </fieldset>
+
+            <!-- Шаг 4 -->
+            <fieldset class="apply-step" data-step="4">
+              <legend>Шаг 4 - Согласие</legend>
+              <label class="checkbox">
+                <input type="checkbox" name="confirm18" required />
+                <span>Подтверждаю, что мне 18 лет и больше.</span>
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="consent" required />
+                <span>Согласен на обработку персональных данных.</span>
+              </label>
+            </fieldset>
+          </div>
+
+          <div class="apply-form__controls">
+            <button type="button" class="btn-step btn-step--prev" disabled>Назад</button>
+            <button type="button" class="btn-step btn-step--next">Далее</button>
+            <button type="submit" class="cta btn-step btn-step--submit">Отправить</button>
+          </div>
+
+          <p class="apply-form__status" aria-live="polite"></p>
+        </form>
+
+        <!-- Форма для персонала -->
+        <form id="apply-staff" class="apply-form" data-telegram-token="8436171257:AAFCGdRLWzAtCY3dndzGU8BZmCaqt84G_Yc" data-telegram-chat="-5082745831">
+          <fieldset>
+            <legend>Форма для персонала</legend>
+            <label>Вакансия
+              <input type="text" name="vacancy" id="staff-vacancy-field" placeholder="Например: HR менеджер" required />
+            </label>
+            <label>ФИО <input type="text" name="fullname" required /></label>
+            <label>Телефон <input type="tel" name="phone" required /></label>
+            <label>Email <input type="email" name="email" required /></label>
+            <label>Ссылка на резюме или LinkedIn <input type="url" name="resume" /></label>
+            <label>Опыт (кратко)
+              <textarea name="experience" rows="4" required></textarea>
+            </label>
+            <label class="checkbox">
+              <input type="checkbox" name="consent" required />
+              <span>Согласен на обработку персональных данных.</span>
+            </label>
+          </fieldset>
+          <button type="submit" class="cta">Отправить заявку</button>
+          <p class="apply-form__status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- СТРАНИЦА ОТЗЫВЫ ОТДЕЛЬНО (заглушка) -->
+    <section id="reviews-full" class="section reveal">
+      <div class="container">
+        <h2>Отзывы - отдельная страница</h2>
+        <p>Пока в разработке. Контент будет добавлен позже.</p>
+      </div>
+    </section>
+
+    <!-- СЕКЦИЯ О КОМПАНИИ ПОДРОБНО -->
+    <section id="about-full" class="section reveal">
+      <div class="container">
+        <h2>О компании</h2>
+        <p>
+          PrimeCam Models создает карьеру моделям и команде по всему миру, сочетая digital технологии, маркетинг и персональное сопровождение. Мы развиваем бренды моделей, помогаем выйти на международные платформы и строим долгосрочную стратегию для каждой девушки.
+        </p>
+        <p>
+          Наш подход строится на прозрачности, уважении и реальных результатах. Обучение, поддержка 24/7, финансовое планирование и международные поездки - часть экосистемы PrimeCam Models.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ФУТЕР -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h3>Навигация</h3>
+        <ul>
+          <li><a href="#apply">Контакты</a></li>
+          <li><a href="#vacancies">Вакансии</a></li>
+          <li><a href="#faq">FAQ (скоро)</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Соцсети</h3>
+        <ul>
+          <li><a href="#" target="_blank">TikTok</a></li>
+          <li><a href="#" target="_blank">Instagram</a></li>
+          <li><a href="#" target="_blank">YouTube</a></li>
+          <li><a href="#" target="_blank">Twitter</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3>Политика безопасности</h3>
+        <p class="footer__policy">
+          Мы собираем и обрабатываем персональные данные только для целей подбора, обучения и сопровождения моделей и сотрудников. Данные не передаются третьим лицам без согласия, кроме случаев, предусмотренных законом. По запросу кандидат может запросить удаление своих данных, обновление или уточнение информации.
+        </p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© PrimeCam Models, 2025. Все права защищены.</span>
+    </div>
+  </footer>
+
 </body>
 </html>
